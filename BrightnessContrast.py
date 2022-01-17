@@ -118,7 +118,6 @@ def BrightnessContrast(brightness=0):
                 window=lblVideoGris, 
                 anchor="nw")
     canvasScreen2.append(lblGris)
-    cv2.imshow('Effect', effect)
 
 ##Controller
 def controller(img, brightness=255,
