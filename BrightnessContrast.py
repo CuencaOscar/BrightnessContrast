@@ -66,7 +66,7 @@ def create_rectangle(x, y, a, b, hight, width, wscreen1, hscreen1, **options):
 
 # Upload video
 
-def visualizar():
+def visualize():
     global cap, lbl, frame2
     if cap is not None:
         ret, frame = cap.read()
@@ -92,10 +92,10 @@ def visualizar():
                 anchor="nw")
             canvasScreen2.append(lbl)
             BrightnessContrast()
-            lblVideo.after(25, visualizar)
+            lblVideo.after(25, visualize)
         else:
             lblVideo.image = ""
-            cap.release()
+            endVideo()
 
 def BrightnessContrast(brightness=0):
     global frame2
@@ -158,7 +158,7 @@ def watchVideo():
     ])
     if len(video_path) > 0:
         cap = cv2.VideoCapture(video_path)
-        visualizar()
+        visualize()
         sclBrillo.configure(
             orient=HORIZONTAL,
             from_=-255, 
@@ -174,24 +174,24 @@ def watchVideo():
         toggleBtn("disabled", "normal")
         lblBrightness = canvas.create_text(
             (W-wscreen2)/2+wscreen2/2-300, 
-            positionvideoY+375, 
+            positionvideoY+int(hscreen2*0.5)+25, 
             text="BRIGHTNESS",
             anchor="n", 
             font="Times 22 italic bold")
         lblContrast = canvas.create_text(
             (W-wscreen2)/2+wscreen2/2-300, 
-            positionvideoY+450, 
+            positionvideoY+int(hscreen2*0.5)+85, 
             text="CONTRAST",
             anchor="n", 
             font="Times 22 italic bold")
         sclBrillo2 = canvas.create_window(
                 (W-wscreen2)/2+wscreen2/2, 
-                positionvideoY+375, 
+                positionvideoY+int(hscreen2*0.5)+25, 
                 window=sclBrillo, 
                 anchor="n")
         sclContraste2 = canvas.create_window(
                 (W-wscreen2)/2+wscreen2/2, 
-                positionvideoY+450,
+                positionvideoY+int(hscreen2*0.5)+85,
                 window=sclContraste, 
                 anchor="n")
         canvasScreen2.append(lblBrightness)
@@ -200,7 +200,7 @@ def watchVideo():
         canvasScreen2.append(sclContraste2)
         canvas.mainloop()
     else:
-        print("No ha escogido un video")
+        print("No video")
 
 def toggleBtn(stateBtnUpload, stateBtnClean):
     btnUpload = Button(
@@ -210,7 +210,7 @@ def toggleBtn(stateBtnUpload, stateBtnClean):
         state=stateBtnUpload, command=watchVideo)
     btnUpload = canvas.create_window(
                     (W-wscreen2)/2+wscreen2/2, 
-                    (H-hscreen2)/2+300, 
+                    (H-hscreen2)/2+hscreen2/2-int(hscreen2*0.5/4), 
                     anchor="n", 
                     window=btnUpload)
     btnClean = Button(
@@ -221,7 +221,7 @@ def toggleBtn(stateBtnUpload, stateBtnClean):
         command=endVideo)
     btnClean = canvas.create_window(
                     (W-wscreen2)/2+wscreen2/2, 
-                    (H-hscreen2)/2+380,
+                    (H-hscreen2)/2+hscreen2/2,
                     anchor="n", 
                     window=btnClean)
 
