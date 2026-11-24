@@ -9,11 +9,11 @@ program at Universidad del Azuay.
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white)
 ![Tkinter](docs/badge-tkinter.svg)
 
-![Workspace: original and processed video with brightness and contrast sliders](docs/workspace.jpg)
+![Workspace: original and processed video with brightness and contrast sliders](docs/workspace.png)
 
 ## Features
 
-<p align="center"><img src="docs/welcome.jpg" alt="Welcome screen" width="640"></p>
+<p align="center"><img src="docs/welcome.png" alt="Welcome screen" width="700"></p>
 
 
 - Load any video file from disk
