@@ -1,4 +1,4 @@
 imutils==0.5.4
-numpy==1.22.0
-opencv-python==4.5.5.62
-Pillow==9.0.0
+numpy==1.26.4
+opencv-python==4.14.0.94
+Pillow==9.5.0
