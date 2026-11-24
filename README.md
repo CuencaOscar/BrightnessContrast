@@ -6,7 +6,7 @@ adjusting **brightness** and **contrast** with sliders while it plays.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white)
-![Tkinter](https://img.shields.io/badge/Tkinter-FFCC00?logo=python&logoColor=black)
+![Tkinter](docs/badge-tkinter.svg)
 
 ## Features
 
