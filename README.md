@@ -2,13 +2,19 @@
 
 Desktop tool for **real-time video processing** built with **Python**, **OpenCV** and
 **Tkinter**. You load a video and see the original and the processed version side by side,
-adjusting **brightness** and **contrast** with sliders while it plays.
+adjusting **brightness** and **contrast** with sliders while it plays. Built for the Digital Signal Processing course of the Electronics Engineering
+program at Universidad del Azuay.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white)
 ![Tkinter](docs/badge-tkinter.svg)
 
+![Workspace: original and processed video with brightness and contrast sliders](docs/workspace.jpg)
+
 ## Features
+
+<p align="center"><img src="docs/welcome.jpg" alt="Welcome screen" width="640"></p>
+
 
 - Load any video file from disk
 - Side-by-side view: original vs. processed video
